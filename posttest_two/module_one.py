@@ -1,3 +1,12 @@
+"""
+1. Buatlah program sederhana konversi suhu dengan
+menggunakan bahasa pemograman Python. Dengan kriteria
+1. Fahrenheit ke Celsius
+2. Kelvin ke Celsius
+3. Reamur ke Celsius
+Gunakan Variabel dan operasi Aritmatika
+"""
+
 import math
 choice = "0"
 
@@ -31,8 +40,6 @@ while choice != "4":
     reamur = float(input("Masukkan Nilai Reamur : "))
     celcius = math.floor(reamur / 0.8)
     print(f"Hasil : {reamur} R > {celcius} C")
-
-  choice = choices()
 
 print("Terima kasih!")
    
