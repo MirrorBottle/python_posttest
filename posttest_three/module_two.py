@@ -1,4 +1,5 @@
 from random import randint
+import getpass
 users = [
   {"id": randint(1, 999), "name": "hiroto", "password": "mypass"},
 ]
@@ -23,14 +24,14 @@ while is_running:
     user = {}
     user['id'] = randint(0, 999)
     user['name'] = input("Masukkan nama anda : ")
-    user['password'] = input("Masukkan password : ")
+    user['password'] = getpass.getpass(prompt='Masukkan password : ')
     users.append(user)
     print("Anda berhasil mendaftar! Silahkan login")
   elif chose == "2":
     curr_user = False
     while curr_user == False and attempts <= 3:
       name = input("Masukkan nama anda : ")
-      password  = input("Masukkan password : ")
+      password  = getpass.getpass(prompt='Masukkan password : ')
       for user in users:
         curr_user = user if user['name'] == name and user['password'] == password else False
       if curr_user:
