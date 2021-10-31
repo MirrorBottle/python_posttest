@@ -32,8 +32,7 @@ while is_running:
     while curr_user == False and attempts <= 3:
       name = input("Masukkan nama anda : ")
       password  = getpass.getpass(prompt='Masukkan password : ')
-      for user in users:
-        curr_user = user if user['name'] == name and user['password'] == password else False
+      curr_user = next((user for user in users if user['name'] == name and user['password'] == password), False)
       if curr_user:
         print(f"Anda berhasil login sebagai {name}")
       else:
