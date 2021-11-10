@@ -60,8 +60,8 @@ def store_menu(items, data, is_append=True):
   if is_append:
     items.append(data)
   else:
-    midpoint = len(items)//2  
-    items = items[0:midpoint] + [data] + items[midpoint:]
+    midpoint = len(items)//2 
+    items.insert(midpoint, data)
   return items
 
 def destroy_menu(items, id):
